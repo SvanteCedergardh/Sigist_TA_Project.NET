@@ -18,12 +18,13 @@ namespace SIGIST_Automation.NET
             _web = new WebInteractionSelenium(CurrentTestCase);
             
             _web.Navigate(TestDataSet.homePage);
+            _web.SetBrowserSize(1920, 1200);
         }
 
         [TestCleanup]
         public void TearDown()
         {
-            _web.MakeSureDriverIsClosed();
+            //_web.MakeSureDriverIsClosed();
         }
 
         [TestMethod]
